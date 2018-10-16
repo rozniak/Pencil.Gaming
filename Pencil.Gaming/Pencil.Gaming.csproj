@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Compatibility-GLFW2</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -13,6 +13,8 @@
     <SynchReleaseVersion>False</SynchReleaseVersion>
     <Description>A minimalistic gaming library for C# based on OpenTK.</Description>
     <AssemblyName>Pencil.Gaming</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Compatibility-GLFW2|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -31,6 +33,7 @@
       </CustomCommands>
     </CustomCommands>
     <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Core-GLFW2|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -47,6 +50,7 @@
         <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives64-glfw2&quot; &quot;${TargetDir}/natives64&quot;" />
       </CustomCommands>
     </CustomCommands>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Compatibility-GLFW3|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -65,6 +69,7 @@
       </CustomCommands>
     </CustomCommands>
     <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Core-GLFW3|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -81,6 +86,7 @@
         <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives64-glfw3&quot; &quot;${TargetDir}/natives64&quot;" />
       </CustomCommands>
     </CustomCommands>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -159,17 +165,7 @@
     <Compile Include="Math\DualQuaternion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Math\" />
-    <Folder Include="Graphics\" />
-    <Folder Include="Glfw\" />
-    <Folder Include="Audio\" />
-    <Folder Include="natives32-glfw2\" />
-    <Folder Include="natives64-glfw2\" />
-    <Folder Include="natives32-glfw3\" />
-    <Folder Include="natives64-glfw3\" />
-    <Folder Include="Scripting\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Pencil.Gaming.dll.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
