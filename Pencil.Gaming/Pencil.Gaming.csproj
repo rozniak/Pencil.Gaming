@@ -24,14 +24,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="rm -r &quot;${TargetDir}/natives32-glfw3&quot;" />
-        <Command type="AfterBuild" command="rm -r &quot;${TargetDir}/natives64-glfw3&quot;" />
-        <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives32-glfw2&quot; &quot;${TargetDir}/natives32&quot;" />
-        <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives64-glfw2&quot; &quot;${TargetDir}/natives64&quot;" />
-      </CustomCommands>
-    </CustomCommands>
     <ConsolePause>false</ConsolePause>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -42,14 +34,6 @@
     <DefineConstants>USE_GL_CORE; USE_GLFW2;</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="rm -r &quot;${TargetDir}/natives32-glfw3&quot;" />
-        <Command type="AfterBuild" command="rm -r &quot;${TargetDir}/natives64-glfw3&quot;" />
-        <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives32-glfw2&quot; &quot;${TargetDir}/natives32&quot;" />
-        <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives64-glfw2&quot; &quot;${TargetDir}/natives64&quot;" />
-      </CustomCommands>
-    </CustomCommands>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Compatibility-GLFW3|AnyCPU' ">
@@ -60,14 +44,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="rm -r &quot;${TargetDir}/natives32-glfw2&quot;" />
-        <Command type="AfterBuild" command="rm -r &quot;${TargetDir}/natives64-glfw2&quot;" />
-        <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives32-glfw3&quot; &quot;${TargetDir}/natives32&quot;" />
-        <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives64-glfw3&quot; &quot;${TargetDir}/natives64&quot;" />
-      </CustomCommands>
-    </CustomCommands>
     <ConsolePause>false</ConsolePause>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -78,14 +54,6 @@
     <DefineConstants>USE_GL_CORE; USE_GLFW3;</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="rm -r &quot;${TargetDir}/natives32-glfw2&quot;" />
-        <Command type="AfterBuild" command="rm -r &quot;${TargetDir}/natives64-glfw2&quot;" />
-        <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives32-glfw3&quot; &quot;${TargetDir}/natives32&quot;" />
-        <Command type="AfterBuild" command="mv &quot;${TargetDir}/natives64-glfw3&quot; &quot;${TargetDir}/natives64&quot;" />
-      </CustomCommands>
-    </CustomCommands>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
